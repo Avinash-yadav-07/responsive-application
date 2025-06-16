@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap');
+
+.profile {
+  margin-top: 50px; /* Fallback to clear navbar */
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 2rem 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.profile-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 4rem;
+  color: #ffffff;
+  animation: slideUp 0.8s ease-out 0.2s backwards;
+}
+
+.profile-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0.5rem;
+  animation: slideUp 0.8s ease-out 0.4s backwards;
+}
+
+.profile-bio {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+  animation: slideUp 0.8s ease-out 0.6s backwards;
+}
+
+.profile-edit-btn {
+  background-color: #1e3a8a;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  animation: slideUp 0.8s ease-out 0.8s backwards;
+}
+
+.profile-edit-btn:hover {
+  background-color: #3b82f6;
+  transform: scale(1.05);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  animation: fadeIn 1s ease-out;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -0.25rem;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #3b82f6;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.section-title:hover::after {
+  width: 100px;
+  left: calc(50% - 50px);
+}
+
+.profile-details {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.detail-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUp 0.8s ease-out;
+}
+
+.detail-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.detail-icon {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.detail-card:hover .detail-icon {
+  transform: scale(1.2);
+}
+
+.detail-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.detail-card p {
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+.profile-settings {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Form Styles */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 350px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  position: relative;
+  margin: 20px auto;
+}
+
+.debug-form {
+  border: 2px solid green; /* Debug: Confirm form rendering */
+}
+
+.form-title {
+  font-size: 28px;
+  color: #1e3a8a;
+  font-weight: 600;
+  letter-spacing: -1px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-title::before,
+.form-title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #1e3a8a;
+}
+
+.form-title::before {
+  width: 18px;
+  height: 18px;
+}
+
+.form-title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.form-message {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.form-flex {
+  display: flex;
+  width: 100%;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  box-sizing: border-box;
+}
+
+.form-label {
+  font-size: 0.9em;
+  color: #1e3a8a;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.edit-form .form-input {
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+  font-size: medium;
+  box-sizing: border-box;
+}
+
+.edit-form textarea.form-input {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.edit-form select.form-input {
+  padding: 10px;
+}
+
+.form-checkbox-field {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9em;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.form-checkbox {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-checkbox:checked {
+  background-color: #1e3a8a;
+  border-color: #1e3a8a;
+}
+
+.form-submit {
+  border: none;
+  outline: none;
+  background-color: #1e3a8a;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.form-submit:hover {
+  background-color: #3b82f6;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .profile-header {
+    margin-bottom: 4rem;
+  }
+
+  .profile-name {
+    font-size: 3rem;
+  }
+
+  .profile-bio {
+    font-size: 1.5rem;
+  }
+
+  .details-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .profile-name {
+    font-size: 2rem;
+  }
+
+  .profile-bio {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .profile {
+    padding: 1.5rem 1rem;
+  }
+
+  .form-flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-field {
+    flex-basis: 100%;
+  }
+}
