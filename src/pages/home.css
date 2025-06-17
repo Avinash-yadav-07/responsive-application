@@ -1,5 +1,5 @@
 .home {
-  padding-top: 50px; /* Account for fixed navbar */
+  padding-top: 80px; /* Account for fixed navbar */
   background-color: #f9fafb;
   min-height: 100vh;
 }
